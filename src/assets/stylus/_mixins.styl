@@ -1,0 +1,61 @@
+@mixin my-mixin-name
+  border solid 2x black
+  border-radius 10px
+
+@mixin flex
+  display flex
+  flex-direction row
+  align-items center
+  align-content center
+  justify-content center
+  flex-flow row wrap
+
+logo()
+  display inline-block
+  position absolute
+  left 20%
+  top .6rem
+  margin-top 0
+  .biomex-logo
+    line-height 0
+    img
+      height 3.4rem
+
+navi-links-box-shadow()
+  box-shadow 0px .3rem .3rem -.35rem $box-shadow-color
+
+box-shadows()
+  box-shadow 0px 0px 9px -5px $box-shadow-color;
+
+
+$custom-form-button-var-1()
+  min-width: 10rem;
+  padding: 0.3rem 1rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin: 4px 2px;
+  cursor: pointer;
+  border: none;
+  background-color: $button-background-color-light;
+  border-radius: 0.5rem;
+  color: $secondary-text-color;
+
+
+lost-center-container()
+  padding $lost-center-container-padding
+  lost-center $container-width
+
+box-title($studie_box-content-paddings, $studie_box_border-radius)
+  padding $studie_box-content-paddings
+  border-top-left-radius $studie_box_border-radius
+  border-top-right-radius $studie_box_border-radius
+  text-transform uppercase
+  font-size 1.5rem
+  font-weight bold
+
+
+box-sub-title($studie_capacy-padding, $studie_box-subtitle-background-color)
+  padding $studie_capacy-padding
+  background-color $studie_box-subtitle-background-color
+  font-weight bold
