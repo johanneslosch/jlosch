@@ -60,16 +60,78 @@
       </div>
     </div>
   </div>
+  <div class="projects">
+    <div class="title">
+      <h1>Projects</h1>
+    </div>
+    <div class="applys">
+      <div class="project">
+        <ProjectComponent
+          class="component"
+          title="test"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
+          codeUrl="https://github.com/johanneslosch/test"
+          language="java"
+          demoUrl="https://google.com"
+        />
+        <ProjectComponent
+          class="component"
+          title="test"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
+          codeUrl="https://github.com/johanneslosch/test"
+          language="java"
+          demoUrl="https://google.com"
+        />
+        <ProjectComponent
+          class="component"
+          title="test"
+          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
+          codeUrl="https://github.com/johanneslosch/test"
+          language="java"
+          demoUrl="https://google.com"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
 import Navigation from "./components/Navigation.vue";
 import LinkCoponent from "./components/Link.vue";
+import ProjectComponent from "./components/Project.vue";
 
 export default {
   name: "App",
   components: {
     Navigation,
+    ProjectComponent,
     LinkCoponent,
   },
 };
@@ -137,7 +199,6 @@ export default {
 
 .about {
   background: $bg_pink;
-  margin-bottom: 80%;
   height: 1440px;
   border-bottom: 0.5rem solid $bg_line;
 
@@ -148,7 +209,6 @@ export default {
 
     img {
       width: 25%;
-      z-index: 2;
       margin-left: 10%;
       border-radius: 50%;
       max-width: 100%;
@@ -174,6 +234,14 @@ export default {
     height: 25rem;
     background: $bg_pink;
     transform: rotate(10deg);
+  }
+}
+
+.projects {
+  .applys {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
   }
 }
 </style>
