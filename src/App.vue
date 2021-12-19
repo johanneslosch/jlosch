@@ -58,7 +58,6 @@
           </p>
         </div>
       </div>
-      <div class="angel2" />
     </div>
   </div>
 </template>
@@ -130,8 +129,8 @@ export default {
     background: $bg_blue;
     max-width: 120%;
     height: 30rem;
-    border-bottom: 0.5rem solid $bg_line;
     margin-left: -20%;
+    border-bottom: 0.5rem solid $bg_line;
     transform: rotate(-10deg);
   }
 }
@@ -140,6 +139,7 @@ export default {
   background: $bg_pink;
   margin-bottom: 80%;
   height: 1440px;
+  border-bottom: 0.5rem solid $bg_line;
 
   .content {
     display: flex;
@@ -172,7 +172,6 @@ export default {
   .angel2 {
     margin-top: 1rem;
     height: 25rem;
-    border-bottom: 0.5rem solid $bg_line;
     background: $bg_pink;
     transform: rotate(10deg);
   }
