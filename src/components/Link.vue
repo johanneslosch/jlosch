@@ -44,10 +44,9 @@ export default {
       height: 60%;
       width: 60%;
     }
-
-    img:hover {
-      transform: scale(1);
-    }
+    :hover {
+        transform: scale(1);
+      }
   }
 }
 </style>
