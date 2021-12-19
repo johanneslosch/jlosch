@@ -56,6 +56,10 @@ export default {
     width: 35%;
   }
 
+  p {
+    padding-left: 2rem;
+  }
+
   .buttons {
     display: flex;
     flex-direction: row;

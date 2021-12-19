@@ -1,5 +1,5 @@
 <template>
-  <Navigation />
+  <Navigation style="position: sticky; z-index: 9" />
   <div class="background landing">
     <div class="content">
       <div class="text">
@@ -60,12 +60,12 @@
       </div>
     </div>
   </div>
-  <div class="projects">
-    <div class="title">
-      <h1>Projects</h1>
-    </div>
-    <div class="applys">
-      <div class="project">
+  <div class="background projects">
+    <div class="content">
+      <div class="title">
+        <h1>Projects</h1>
+      </div>
+      <div class="applys">
         <ProjectComponent
           class="component"
           title="test"
@@ -118,7 +118,12 @@
           demoUrl="https://google.com"
         />
       </div>
+      <p class="info">
+        This is only a small selection of my projects. <br />You can find more
+        on my Github account.
+      </p>
     </div>
+    <div class="angle2" />
   </div>
 </template>
 
@@ -150,11 +155,16 @@ export default {
 
   p {
     margin-right: 10%;
+    font-size: 13pt;
   }
 }
 
+.nav {
+  position: relative;
+}
+
 .background {
-  position: static;
+  position: relative;
   margin-left: -5%;
   margin-right: -5%;
   height: 720px;
@@ -163,6 +173,7 @@ export default {
 .landing {
   background: $bg_blue;
   margin-top: $nav_height;
+  z-index: 1;
 
   .content {
     .text {
@@ -228,20 +239,55 @@ export default {
     margin-top: $nav_height -10px;
     height: 20%;
   }
-
-  .angel2 {
-    margin-top: 1rem;
-    height: 25rem;
-    background: $bg_pink;
-    transform: rotate(10deg);
-  }
 }
 
 .projects {
-  .applys {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
+  margin-top: -0.1rem;
+  margin-left: -5rem;
+  margin-right: -5rem;
+  height: 66.6rem;
+  background: $bg_blue;
+  background: $bg_blue;
+  z-index: 1;
+
+  .angle2 {
+    background: $bg_blue;
+    margin-top: 7rem;
+    max-width: 120%;
+    height: 25rem;
+    z-index: -5;
+    margin-left: -20%;
+    border-bottom: 0.5rem solid $bg_line;
+    transform: rotate(-10deg);
+  }
+
+  .content {
+    padding-top: 2rem;
+
+    .info {
+      padding-top: 2rem;
+      margin-left: 10em;
+    }
+
+    .title {
+      padding-bottom: 2rem;
+    }
+
+    .applys {
+      margin-left: 1%;
+      margin-right: 1%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      gap: 2rem;
+    }
+
+    .component {
+      flex: 0 0 33.333333%;
+    }
   }
 }
 </style>
