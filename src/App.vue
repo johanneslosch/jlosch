@@ -2,8 +2,10 @@
   <Navigation />
   <div class="background landing">
     <div class="content">
-      <h1>Johannes Losch</h1>
-      <strong>Lorem ipsum dolor sit</strong>
+      <div class="text">
+        <h1>Johannes Losch</h1>
+        <strong>Lorem ipsum dolor sit</strong>
+      </div>
       <div class="links">
         <LinkCoponent name="github" url="https://github.com/johanneslosch" />
         <LinkCoponent
@@ -16,6 +18,9 @@
         />
         <LinkCoponent name="twitter" url="https://twitter.com/johanneslosch" />
         <LinkCoponent name="medium" url="https://johanneslosch.medium.com/" />
+      </div>
+      <div class="arrows">
+        <img src="https://s.jlosch.de/misc/angle.svg" loading="lazy" />
       </div>
     </div>
     <div class="angle1" />
@@ -99,7 +104,19 @@ export default {
   margin-top: $nav_height;
 
   .content {
+    .text {
+      padding-top: 15rem;
+    }
+
+    .arrows {
+      img {
+        width: 5%;
+        height: 5%;
+      }
+    }
+
     .links {
+      margin-top: 2rem;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -109,7 +126,7 @@ export default {
   }
 
   .angle1 {
-    margin-top: $nav_height + 250px;
+    margin-top: $nav_height - 60px;
     background: $bg_blue;
     max-width: 120%;
     height: 30rem;
@@ -131,7 +148,7 @@ export default {
 
     img {
       width: 25%;
-      z-index: 2; 
+      z-index: 2;
       margin-left: 10%;
       border-radius: 50%;
       max-width: 100%;
