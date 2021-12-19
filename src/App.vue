@@ -4,7 +4,19 @@
     <div class="content">
       <h1>Johannes Losch</h1>
       <strong>Lorem ipsum dolor sit</strong>
-      <div class="links"></div>
+      <div class="links">
+        <LinkCoponent name="github" url="https://github.com/johanneslosch" />
+        <LinkCoponent
+          name="instagram"
+          url="https://instagram.com/loschjohannes"
+        />
+        <LinkCoponent
+          name="linkedin"
+          url="https://linkedin.com/in/johannes-losch"
+        />
+        <LinkCoponent name="twitter" url="https://twitter.com/johanneslosch" />
+        <LinkCoponent name="medium" url="https://johanneslosch.medium.com/" />
+      </div>
     </div>
   </div>
 </template>
