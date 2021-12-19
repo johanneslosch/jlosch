@@ -23,11 +23,13 @@
 
 <script>
 import Navigation from "./components/Navigation.vue";
+import LinkCoponent from "./components/Link.vue";
 
 export default {
   name: "App",
   components: {
     Navigation,
+    LinkCoponent,
   },
 };
 </script>
@@ -50,8 +52,14 @@ export default {
   background: #D4E6FA;
 
   .content {
-    align-content: center;
-    vertical-align: middle;
+    .links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
   }
 }
 </style>
