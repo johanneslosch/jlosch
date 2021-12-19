@@ -1,7 +1,7 @@
 <template>
   <a class="link" :href="url" target="_blank">
     <div class="circle">
-      <img :src="'https://s.jlosch.de/links/' + name + '.svg'" />
+      <img :src="'https://s.jlosch.de/links/' + name + '.svg'" loading="lazy" />
     </div>
   </a>
 </template>
@@ -44,9 +44,10 @@ export default {
       height: 60%;
       width: 60%;
     }
+
     :hover {
-        transform: scale(1);
-      }
+      transform: scale(1);
+    }
   }
 }
 </style>
