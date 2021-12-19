@@ -198,19 +198,19 @@ export default {
   }
 
   .angle1 {
-    margin-top: $nav_height - 60px;
+    margin-top: 8rem;
     background: $bg_blue;
     max-width: 120%;
-    height: 30rem;
+    height: 13rem;
     margin-left: -20%;
     border-bottom: 0.5rem solid $bg_line;
-    transform: rotate(-10deg);
+    transform: rotate(-4deg);
   }
 }
 
 .about {
   background: $bg_pink;
-  height: 1440px;
+  height: 1240px;
   border-bottom: 0.5rem solid $bg_line;
 
   .content {
@@ -232,12 +232,12 @@ export default {
   }
 
   .text {
-    margin-top: 6%;
+    margin-top: 0%;
   }
 
   .filler {
     margin-top: $nav_height -10px;
-    height: 20%;
+    height: 15%;
   }
 }
 
@@ -245,20 +245,20 @@ export default {
   margin-top: -0.1rem;
   margin-left: -5rem;
   margin-right: -5rem;
-  height: 66.6rem;
+  height: 60rem;
   background: $bg_blue;
   background: $bg_blue;
   z-index: 1;
 
   .angle2 {
     background: $bg_blue;
-    margin-top: 7rem;
+    margin-top: 5rem;
     max-width: 120%;
-    height: 25rem;
+    height: 11rem;
     z-index: -5;
     margin-left: -20%;
     border-bottom: 0.5rem solid $bg_line;
-    transform: rotate(-10deg);
+    transform: rotate(-4deg);
   }
 
   .content {
