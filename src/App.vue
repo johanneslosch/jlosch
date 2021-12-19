@@ -125,6 +125,47 @@
     </div>
     <div class="angle2" />
   </div>
+  <div class="background contact">
+    <div class="content">
+      <div class="title">
+        <h1>Contact</h1>
+      </div>
+      <div class="form">
+        <div class="form-content">
+          <input
+            type="email"
+            placeholder="email"
+            class="form-content-field text"
+            name="email"
+            id="email"
+            required="required"
+          />
+        </div>
+        <div class="form-content">
+          <input
+            type="text"
+            placeholder="name"
+            class="form-content-field text"
+            name="text-1639950031232"
+            required="required"
+            aria-required="true"
+          />
+        </div>
+        <div class="form-content">
+          <textarea
+            type="textarea"
+            class="form-content-field textarea"
+            placeholder="message"
+            required="required"
+            aria-required="true"
+          ></textarea>
+        </div>
+        <div class="form-content">
+          <button class="button">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -287,6 +328,59 @@ export default {
 
     .component {
       flex: 0 0 33.333333%;
+    }
+  }
+}
+
+.contact {
+  margin-top: -10rem;
+  height: 850px;
+  border-bottom: 0.5rem solid $bg_line;
+  background: $bg_pink;
+
+  .content {
+    z-index: 3;
+
+    .title {
+      padding-top: 20rem;
+    }
+
+    .form {
+      .form-content {
+        margin-top: 1rem;
+
+        .button {
+          display: inline-block;
+          border-radius: 10px;
+          border: 2px solid;
+          background: #D4FAD5;
+          text-align: center;
+          padding: 20px;
+          font-size: 20pt;
+          width: 20rem;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+
+        .form-content-field {
+          width: 50%;
+          border: 2px solid;
+          height: 3rem;
+          text-align: center;
+          font-size: 20pt;
+          vertical-align: middle;
+          border-radius: 4rem;
+
+          &[type=textarea] {
+            height: 10rem;
+            border-radius: 2rem;
+          }
+        }
+      }
     }
   }
 }
