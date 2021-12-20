@@ -91,9 +91,9 @@ input[type='checkbox']:checked + label span:nth-of-type(3) {
 #hamitems {
   display: flex;
   padding-top: 2rem;
-  border-left: 1px solid $nav_dropdown_border-left-color;
+  // border-left: 1px solid $nav_dropdown_border-left-color;
   height: 100vh;
-  background-color: $nav_dropdown_background-color;
+  background-color: rgba(217, 217, 217, 0.2);
   flex-direction: column;
   position: fixed;
   min-width: 300px;
