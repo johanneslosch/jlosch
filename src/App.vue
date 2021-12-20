@@ -421,6 +421,7 @@ export default {
           &[type=textarea] {
             height: 10rem;
             border-radius: 2rem;
+            resize: none;
           }
         }
       }
