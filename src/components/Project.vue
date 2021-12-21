@@ -7,7 +7,7 @@
     </p>
     <div class="buttons">
       <a :href="codeUrl">Code</a>
-      <a :href="demoUrl">Demo</a>
+      <a :href="demoUrl" v-if="demoUrl !== null">Demo</a>
       <a>{{ language }}</a>
     </div>
   </div>

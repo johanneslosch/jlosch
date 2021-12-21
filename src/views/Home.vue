@@ -4,7 +4,7 @@
     <div class="content">
       <div class="text">
         <h1>Johannes Losch</h1>
-        <strong>Lorem ipsum dolor sit</strong>
+        <strong>{{ words }}</strong>
       </div>
       <div class="links">
         <LinkCoponent name="github" url="https://github.com/johanneslosch" />
@@ -45,58 +45,22 @@
       <div class="title">
         <h1>Projects</h1>
       </div>
-      <div class="applys">
+      <div class="applys" v-if="projects !== []">
         <ProjectComponent
+          v-for="project in projects"
+          :key="project.id"
           class="component"
-          title="test"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
-          codeUrl="https://github.com/johanneslosch/test"
-          language="java"
-          demoUrl="https://google.com"
+          :title="project.title"
+          :description="project.description"
+          :codeUrl="project.gitUrl"
+          :imageUrl="project.imageUrl"
+          :language="project.language"
+          :demoUrl="project.demoUrl"
         />
-        <ProjectComponent
-          class="component"
-          title="test"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
-          codeUrl="https://github.com/johanneslosch/test"
-          language="java"
-          demoUrl="https://google.com"
-        />
-        <ProjectComponent
-          class="component"
-          title="test"
-          description="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
-            dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod"
-          codeUrl="https://github.com/johanneslosch/test"
-          language="java"
-          demoUrl="https://google.com"
-        />
+      </div>
+      <div v-else class="applys">
+        <h2>Some Error dings</h2>
+        <p>Here should be some content</p>
       </div>
       <p class="info">
         This is only a small selection of my projects. <br />You can find more
@@ -115,6 +79,7 @@
           <input
             type="email"
             placeholder="email"
+            v-model="contact.email"
             class="form-content-field text"
             name="email"
             id="email"
@@ -125,6 +90,7 @@
           <input
             type="text"
             placeholder="name"
+            v-model="contact.name"
             class="form-content-field text"
             name="text-1639950031232"
             required="required"
@@ -134,6 +100,7 @@
         <div class="form-content">
           <textarea
             type="textarea"
+            v-model="contact.message"
             class="form-content-field textarea"
             placeholder="message"
             required="required"
@@ -141,8 +108,9 @@
           ></textarea>
         </div>
         <div class="form-content">
-          <button class="button">Send</button>
+          <button class="button" @click="postContact">Send</button>
         </div>
+        <p v-if="contact.responseVisible">{{ contact.response }}</p>
       </div>
     </div>
   </div>
@@ -204,12 +172,41 @@ export default {
     return {
       loading: false,
       about: [],
+      words: "",
+      projects: [],
+      contact: {
+        name: null,
+        email: null,
+        message: null,
+        response: "Your message will be send shortly",
+        responseVisible: false,
+      },
     };
   },
   created() {
     this.getAbout();
+    this.getWords();
+    this.getProjects();
   },
   methods: {
+    getWords() {
+      this.loading = true;
+      axios
+        .get("https://website-api.jlosch.de/inWords?amount=3")
+        .then((response) => {
+          this.loading = false;
+          this.words =
+            response.data[0].word +
+            " | " +
+            response.data[1].word +
+            " | " +
+            response.data[2].word;
+        })
+        .catch((error) => {
+          this.loading = false;
+          console.log(error);
+        });
+    },
     getAbout() {
       this.loading = true;
       axios
@@ -219,6 +216,48 @@ export default {
           this.about = response.data[0];
         })
         .catch((error) => {
+          this.loading = false;
+          console.log(error);
+        });
+    },
+    getProjects() {
+      this.loading = true;
+      axios
+        .get("https://website-api.jlosch.de/project")
+        .then((response) => {
+          this.projects = response.data;
+        })
+        .catch((error) => {
+          this.loading = false;
+          console.log(error);
+        });
+    },
+    //TODO: contact does not send
+    async postContact() {
+      this.loading = true;
+      const details = {
+        name: this.contact.name,
+        email: this.contact.email,
+        message: this.contact.message,
+      };
+
+      await axios
+        .post(
+          "https://website-api.jlosch.de/contact?domain=jlosch.de",
+          details,
+          {
+            headers: {
+              "Content-Type": "application/json",
+              "Response-Type": "application/json",
+            },
+          }
+        )
+        .then((response) => {
+          this.contact.responseVisible = true;
+        })
+        .catch((error) => {
+          this.contact.response = "There was an error at sending your message";
+          this.contact.responseVisible = true;
           this.loading = false;
           console.log(error);
         });
@@ -364,6 +403,7 @@ export default {
 
     .component {
       flex: 0 0 33.333333%;
+      height: 30rem;
     }
   }
 }
