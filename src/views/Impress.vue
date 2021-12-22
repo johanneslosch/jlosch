@@ -1,4 +1,5 @@
 <template>
+  <Navigation style="position: sticky; z-index: 9" />
   <div>
     <div class="impressum">
       <h1 class="center">Imprint</h1>
@@ -92,9 +93,11 @@
 
 <script>
 import Footer from "../components/Footer.vue";
+import Navigation from "../components/Navigation.vue";
 
 export default {
   components: {
+    Navigation,
     Footer,
   },
 };
