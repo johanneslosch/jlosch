@@ -192,7 +192,7 @@ export default {
     getWords() {
       this.loading = true;
       axios
-        .get("https://website-api.jlosch.de/inWords?amount=3")
+        .get("https://website-api.jlosch.de/api/inWords?amount=3")
         .then((response) => {
           this.loading = false;
           this.words =
@@ -210,7 +210,7 @@ export default {
     getAbout() {
       this.loading = true;
       axios
-        .get("https://website-api.jlosch.de/about?website=jlosch.de")
+        .get("https://website-api.jlosch.de/api/about?website=jlosch.de")
         .then((response) => {
           this.loading = false;
           this.about = response.data[0];
@@ -223,7 +223,7 @@ export default {
     getProjects() {
       this.loading = true;
       axios
-        .get("https://website-api.jlosch.de/project")
+        .get("https://website-api.jlosch.de/api/project")
         .then((response) => {
           this.projects = response.data;
         })
@@ -232,7 +232,6 @@ export default {
           console.log(error);
         });
     },
-    //TODO: contact does not send
     async postContact() {
       this.loading = true;
       const details = {
@@ -243,16 +242,10 @@ export default {
 
       await axios
         .post(
-          "https://website-api.jlosch.de/contact?domain=jlosch.de",
-          details,
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "Response-Type": "application/json",
-            },
-          }
+          "https://website-api.jlosch.de/api/contact?domain=jlosch.de",
+          details
         )
-        .then((response) => {
+        .then(() => {
           this.contact.responseVisible = true;
         })
         .catch((error) => {
