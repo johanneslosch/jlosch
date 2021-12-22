@@ -114,60 +114,24 @@
       </div>
     </div>
   </div>
-  <div class="background footer">
-    <div class="content">
-      <div class="left">
-        <a>Impress</a>
-        <router-link to="/about">about</router-link>
-        <a>Terms of Service</a>
-        <a>Data protection</a>
-        <a class="help">Help</a>
-        <a>Copyright 2021 Johannes Losch</a>
-      </div>
-      <div class="middle">
-        <a href="https://linkedin.com/in/johannes-losch" target="_blank">
-          <div class="link">
-            <img src="https://s.jlosch.de/links/linkedin.svg" loading="lazy" />
-            LinkedIn
-          </div>
-        </a>
-        <a href="https://johanneslosch.medium.com/" target="_blank">
-          <div class="link">
-            <img src="https://s.jlosch.de/links/medium.svg" loading="lazy" />
-            Medium
-          </div>
-        </a>
-        <a href="https://github.com/johanneslosch" target="_blank">
-          <div class="link">
-            <img src="https://s.jlosch.de/links/github.svg" loading="lazy" />
-            Github
-          </div>
-        </a>
-        <a href="https://twitter.com/johanneslosch" target="_blank">
-          <div class="link">
-            <img src="https://s.jlosch.de/links/twitter.svg" loading="lazy" />
-            Twitter
-          </div>
-        </a>
-      </div>
-      <div class="right">
-        <img
-          src="https://s.jlosch.de/logo/logo_johanneslosch_untereinander.svg"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
+  <Footer class="footer" />
 </template>
 
 <script>
 import Navigation from "../components/Navigation.vue";
 import LinkCoponent from "../components/Link.vue";
 import ProjectComponent from "../components/Project.vue";
+import Footer from "../components/Footer.vue";
 import axios from "axios";
 
 export default {
   name: "Home",
+  components: {
+    Navigation,
+    ProjectComponent,
+    LinkCoponent,
+    Footer,
+  },
   data() {
     return {
       loading: false,
@@ -255,11 +219,6 @@ export default {
           console.log(error);
         });
     },
-  },
-  components: {
-    Navigation,
-    ProjectComponent,
-    LinkCoponent,
   },
 };
 </script>
@@ -456,73 +415,12 @@ export default {
 }
 
 .footer {
-  height: 300px;
   background: $bg_blue;
-  margin-bottom: -5%;
+  height: 300px;
+  margin-bottom: -6rem;
 
-  .content {
-    padding-top: 2rem;
-    display: flex;
-    flex-direction: row;
-    text-decoration: none;
-
-    a {
-      font-size: 16pt;
-      color: $text-color;
-    }
-
-    .left {
-      flex-grow: 1;
-      gap: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 33.333%;
-
-      .help {
-        cursor: help;
-      }
-    }
-
-    .middle {
-      a {
-        text-decoration: none;
-
-        &:hover {
-        }
-      }
-
-      .link {
-        img {
-          width: 6%;
-          padding-right: 1rem;
-
-          &:hover {
-            transform: scale(1);
-          }
-        }
-      }
-
-      flex-grow: 1;
-      gap: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 33.333%;
-    }
-
-    .right {
-      img {
-        width: 40%;
-      }
-
-      flex-grow: 1;
-      gap: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 33.333%;
-    }
+  @media screen and (min-width: 600px) {
+    margin-bottom: -3rem;
   }
 }
 </style>

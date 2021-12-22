@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="impressum">
-      <h1>Imprint</h1>
+      <h1 class="center">Imprint</h1>
       <p>Information according to § 5 TMG</p>
       <p>
         Johannes Losch <br />
@@ -87,10 +87,17 @@
       <br />
     </div>
   </div>
+  <Footer class="footer" />
 </template>
 
 <script>
-export default {};
+import Footer from "../components/Footer.vue";
+
+export default {
+  components: {
+    Footer,
+  },
+};
 </script>
 
 <style lang="stylus" scoped>
@@ -106,6 +113,19 @@ export default {};
     flex-direction: column;
     justify-content: center;
     margin-left: 10%;
+    margin-right: -2%;
+
+    .center {
+      padding-right: 10%;
+    }
+  }
+
+  .footer {
+    border-top: 0.5rem solid $bg_line;
+
+    @media screen and (min-width: 600px) {
+      margin-bottom: -6rem;
+    }
   }
 }
 </style>
