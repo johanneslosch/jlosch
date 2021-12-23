@@ -18,10 +18,11 @@
           <span />
         </label>
         <div id="hamitems">
-          <a href="/"> Home Page </a>
-          <a href="/"> Studie </a>
-          <a href="/profile"> profile </a>
-          <a href="/login"> login </a>
+          <a href="/"> Home </a>
+          <router-link to="/impress" class="link"><a> Impress </a></router-link>
+          <router-link to="/datasecurity" class="link"
+            ><a> Data protection </a></router-link
+          >
         </div>
       </nav>
     </div>

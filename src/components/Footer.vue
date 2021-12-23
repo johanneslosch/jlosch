@@ -4,7 +4,7 @@
       <div class="left">
         <router-link to="/impress" class="link"><a>Impress</a></router-link>
         <a>Terms of Service</a>
-        <a>Data protection</a>
+        <router-link to="/datasecurity" class="link"><a>Data protection</a></router-link>
         <a class="help">Help</a>
         <a>Copyright 2021 Johannes Losch</a>
       </div>
