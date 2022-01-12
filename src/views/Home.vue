@@ -223,102 +223,126 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 @import '../assets/stylus/_variables.styl';
+@import '../assets/stylus/_viewport.styl';
 
-.nav {
+.nav
   position: relative;
-}
 
-.background {
+.background
   position: relative;
   margin-left: -5%;
   margin-right: -5%;
   height: 720px;
-}
 
-.landing {
+
+.landing 
   background: $bg_blue;
   margin-top: -1%;
   z-index: 1;
 
-  .content {
-    .text {
+  .content
+    .text
       padding-top: 15rem;
-    }
 
-    .arrows {
-      img {
+    .arrows
+      padding-top 2rem
+      @media screen and (max-width: $tablet-portrait-view)
+        padding-top 2rem 
+      img
         width: 5%;
         height: 5%;
-      }
-    }
+        @media screen and (max-width: $tablet-portrait-view)
+          width: 10%;
+          height: 10%;
 
-    .links {
+    .links
       margin-top: 2rem;
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      gap: 2rem;
-    }
-  }
+      gap: 3rem;
+      @media screen and (max-width: $tablet-portrait-view)
+        gap 2.5rem
 
-  .angle1 {
-    margin-top: 8rem;
-    background: $bg_blue;
-    max-width: 120%;
-    height: 13rem;
-    margin-left: -20%;
-    border-bottom: 0.5rem solid $bg_line;
-    transform: rotate(-4deg);
-  }
-}
+      @media screen and (max-width: $large-mobile-portrait-view)
+        gap 1rem
 
-.about {
-  background: $bg_pink;
-  height: 1240px;
-  border-bottom: 0.5rem solid $bg_line;
+  .angle1
+    margin-top 8rem
+    background $bg_blue
+    max-width 120%
+    height 13rem
+    margin-left -20%
+    border-bottom: 0.5rem solid $bg_line
+    transform rotate(-4deg)
 
-  .content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @media screen and (max-width: $tablet-portrait-view)
+      margin-top 6rem
+.about
+  background $bg_pink
+  height: 1240px
+  border-bottom 0.5rem solid $bg_line
 
-    img {
+  @media screen and (max-width: $tablet-portrait-view)
+    height  850px
+
+    .text
+      padding-top 2rem
+
+  @media screen and (max-width: $large-mobile-portrait-view)
+    height  650px
+
+    .text
+      padding-top 0.5rem
+  .content
+    display flex
+    align-items center
+    justify-content center
+    @media screen and (max-width: $tablet-portrait-view)
+      flex-direction: column
+
+    img
       width: 25%;
       margin-left: 10%;
       border-radius: 50%;
       max-width: 100%;
-    }
+      @media screen and (max-width: $tablet-portrait-view)
+        order 0
+        margin-left: 0
 
-    p {
+    p
       margin-left: 10%;
       padding-right: 10%;
       white-space: pre-wrap;
-    }
-  }
+      @media screen and (max-width: $tablet-portrait-view)
+        order 1
+        padding-right: 0%;
+        white-space: pre-line
 
-  .text {
+  .text
     margin-top: 0%;
-  }
 
-  .filler {
+  .filler
     margin-top: $nav_height -10px;
     height: 15%;
-  }
-}
 
-.projects {
+.projects
   margin-top: -0.1rem;
   margin-left: -5rem;
   margin-right: -5rem;
-  height: 60rem;
+  height: 55rem;
   background: $bg_blue;
   background: $bg_blue;
   z-index: 1;
+  @media screen and (max-width: $tablet-portrait-view)
+    height 55rem
+  @media screen and (max-width: $large-mobile-portrait-view)
+    height: 100rem
 
-  .angle2 {
+  .angle2
     background: $bg_blue;
     margin-top: 5rem;
     max-width: 120%;
@@ -327,21 +351,24 @@ export default {
     margin-left: -20%;
     border-bottom: 0.5rem solid $bg_line;
     transform: rotate(-4deg);
-  }
 
-  .content {
+    @media screen and (max-width: $tablet-portrait-view)
+      margin-top: 0rem;
+    @media screen and (max-width: $large-mobile-portrait-view)
+      margin-top: 0rem;
+    
+
+  .content
     padding-top: 2rem;
 
-    .info {
+    .info
       padding-top: 2rem;
       margin-left: 10em;
-    }
 
-    .title {
+    .title
       padding-bottom: 2rem;
-    }
 
-    .applys {
+    .applys
       margin-left: 1%;
       margin-right: 1%;
       display: flex;
@@ -351,33 +378,36 @@ export default {
       align-items: center;
       align-content: center;
       gap: 2rem;
-    }
-
-    .component {
+      @media screen and (max-width: $tablet-portrait-view)
+        padding-bottom: 2rem
+      @media screen and (max-width: $large-mobile-portrait-view)
+        flex-direction: column
+    .component
+      background lightgray
       flex: 0 0 33.333333%;
       height: 30rem;
-    }
-  }
-}
-
-.contact {
+      @media screen and (max-width: $tablet-portrait-view)
+        margin-bottom: 2rem
+        margin-right: 2rem
+        flex: 0 0 20.333333%;
+      
+.contact
   margin-top: -10rem;
   height: 850px;
   border-bottom: 0.5rem solid $bg_line;
   background: $bg_pink;
 
-  .content {
+  .content
     z-index: 3;
 
-    .title {
+    .title
       padding-top: 20rem;
-    }
 
-    .form {
-      .form-content {
+    .form
+      .form-content
         margin-top: 1rem;
 
-        .button {
+        .button
           display: inline-block;
           border-radius: 10px;
           border: 2px solid;
@@ -392,9 +422,8 @@ export default {
           transition: all 0.5s;
           cursor: pointer;
           margin: 5px;
-        }
 
-        .form-content-field {
+        .form-content-field
           width: 50%;
           border: 2px solid;
           height: 3rem;
@@ -403,24 +432,17 @@ export default {
           vertical-align: middle;
           border-radius: 4rem;
 
-          &[type=textarea] {
+          &[type=textarea]
             height: 10rem;
             border-radius: 2rem;
             resize: none;
-          }
-        }
-      }
-    }
-  }
-}
 
-.footer {
+.footer
   background: $bg_blue;
   height: 300px;
-  margin-bottom: -6rem;
+  margin-bottom: -8rem;
 
-  @media screen and (min-width: 600px) {
-    margin-bottom: -3rem;
-  }
-}
+  @media screen and (max-width: 600px)
+    margin-bottom: -8rem;
+    background: orange;
 </style>
