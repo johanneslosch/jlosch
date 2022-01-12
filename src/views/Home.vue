@@ -1,5 +1,5 @@
 <template>
-  <Navigation style="position: sticky; z-index: 9" />
+  <Navigation class="nav" />
   <div class="background landing">
     <div class="content">
       <div class="text">
@@ -228,7 +228,8 @@ export default {
 @import '../assets/stylus/_viewport.styl';
 
 .nav
-  position: relative;
+  position: sticky
+  z-index: 9
 
 .background
   position: relative;
@@ -335,10 +336,9 @@ export default {
   margin-right: -5rem;
   height: 55rem;
   background: $bg_blue;
-  background: $bg_blue;
   z-index: 1;
   @media screen and (max-width: $tablet-portrait-view)
-    height 55rem
+    height 85rem
   @media screen and (max-width: $large-mobile-portrait-view)
     height: 100rem
 
@@ -360,7 +360,6 @@ export default {
 
   .content
     padding-top: 2rem;
-
     .info
       padding-top: 2rem;
       margin-left: 10em;
@@ -369,8 +368,6 @@ export default {
       padding-bottom: 2rem;
 
     .applys
-      margin-left: 1%;
-      margin-right: 1%;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -380,16 +377,14 @@ export default {
       gap: 2rem;
       @media screen and (max-width: $tablet-portrait-view)
         padding-bottom: 2rem
-      @media screen and (max-width: $large-mobile-portrait-view)
         flex-direction: column
     .component
-      background lightgray
       flex: 0 0 33.333333%;
       height: 30rem;
       @media screen and (max-width: $tablet-portrait-view)
+        margin-left 1rem
         margin-bottom: 2rem
-        margin-right: 2rem
-        flex: 0 0 20.333333%;
+        flex: auto auto 100%
       
 .contact
   margin-top: -10rem;
@@ -442,7 +437,6 @@ export default {
   height: 300px;
   margin-bottom: -8rem;
 
-  @media screen and (max-width: 600px)
-    margin-bottom: -8rem;
-    background: orange;
+  @media screen and (max-width: $large-mobile-portrait-view)
+    height: 45rem
 </style>

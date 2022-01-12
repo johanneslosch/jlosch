@@ -2,12 +2,14 @@
   <div class="background footer">
     <div class="content">
       <div class="left">
+        <ul>
+          <li>
         <router-link to="/impress" class="link"><a>Impress</a></router-link>
-        <a>Terms of Service</a>
-        <router-link to="/datasecurity" class="link"><a>Data protection</a></router-link>
-        <a class="help">Help</a>
-        <a>Copyright 2021 Johannes Losch</a>
-      </div>
+          </li><li><a>Terms of Service</a>
+        </li><li><router-link to="/datasecurity" class="link"><a>Data protection</a></router-link>
+        </li><li><a class="help">Help</a>
+        </li><li><a>Copyright Johannes Losch</a>
+      </li></ul></div>
       <div class="middle">
         <a href="https://linkedin.com/in/johannes-losch" target="_blank">
           <div class="link">
@@ -49,61 +51,67 @@ export default {};
 </script>
 
 <style lang="stylus" scoped>
-.background {
+@import '../assets/stylus/_variables.styl';
+@import '../assets/stylus/_viewport.styl';
+.background
   position: relative;
   margin-left: -5%;
   margin-right: -5%;
   height: 720px;
-}
 
-.footer {
+.footer
   height: 300px;
   background: $bg_blue;
   margin-bottom: -5%;
 
-  .content {
+
+  .content
     padding-top: 2rem;
     display: flex;
     flex-direction: row;
     text-decoration: none;
-
-    .left {
-      flex-grow: 1;
-      gap: 1rem;
-      display: flex;
+    @media screen and (max-width: $large-mobile-portrait-view)
       flex-direction: column;
-      align-items: center;
-      width: 33.333%;
 
-      .link {
+    .left
+      gap: 1rem;
+      width: 33.333%;
+      ul
+        list-style-type: none;
+      .help
+          cursor: help;
+      .link
         color: $text-color;
         font-size: 16pt;
-        text-decoration: none;
-      }
+        text-decoration: underline;
+      @media screen and (max-width: $large-mobile-portrait-view)
+        order 0
+        width: 100%
+        justify-content: center
+        padding-bottom: 2rem
+        
 
-      .help {
-        cursor: help;
-      }
-    }
+    .middle
+      a
+        text-decoration: none
+      @media screen and (max-width: $large-mobile-portrait-view)
+        order 1
+        width: 100%
+        justify-content: center
+        padding-bottom: 2rem
 
-    .middle {
-      a {
-        text-decoration: none;
-
-        &:hover {
-        }
-      }
-
-      .link {
-        img {
+      .link
+          @media screen and (max-width: $large-mobile-portrait-view)
+            font-size: $font-size_big
+            img
+              width 10%
+        img
           width: 6%;
           padding-right: 1rem;
 
-          &:hover {
+          &:hover 
             transform: scale(1);
-          }
-        }
-      }
+
 
       flex-grow: 1;
       gap: 1rem;
@@ -111,12 +119,15 @@ export default {};
       flex-direction: column;
       align-items: center;
       width: 33.333%;
-    }
 
-    .right {
-      img {
+    .right
+      @media screen and (max-width: $large-mobile-portrait-view)
+        order 3
+        width: 100%
+        justify-content: center
+        padding-bottom: 2rem
+      img
         width: 40%;
-      }
 
       flex-grow: 1;
       gap: 1rem;
@@ -124,7 +135,4 @@ export default {};
       flex-direction: column;
       align-items: center;
       width: 33.333%;
-    }
-  }
-}
 </style>

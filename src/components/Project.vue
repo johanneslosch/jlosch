@@ -1,7 +1,8 @@
 <template>
   <div class="project">
     <h2>{{ title }}</h2>
-    <img :src="imageUrl" />
+    <img v-if="imageUrl !=null" :src="imageUrl" />
+    <img v-else src="https://s.jlosch.de/images-jlosch.de/missing-picture.svg" />
     <p>
       {{ description }}
     </p>
@@ -46,26 +47,27 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.project {
+@import '../assets/stylus/_variables.styl';
+@import '../assets/stylus/_viewport.styl';
+.project
+  background: white
   border: 1px solid #000;
   border-radius: 2rem;
   padding-bottom: 2em;
   max-width: 30%;
+  @media screen and (max-width: $tablet-portrait-view)
+    max-width: 60%
 
-  img {
+  img
     width: 35%;
-  }
 
-  p {
+  p
     padding-left: 2rem;
-  }
 
-  .buttons {
+  .buttons
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3rem;
-  }
-}
 </style>
