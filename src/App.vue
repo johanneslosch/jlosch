@@ -5,8 +5,13 @@
 <style lang="stylus">
 @import './assets/stylus/_variables.styl';
 
+@font-face {
+  font-family: 'Coolvetica';
+  src: local('Coolvetica'), url('./assets/fonts/coolvetica regular.ttf') format("truetype");
+}
+
 #app {
-  font-family: Coolvetica, Helvetica, Arial, sans-serif;
+  font-family: 'Coolvetica';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -21,6 +26,7 @@
   padding-bottom: 5.7rem;
   height: auto;
   overflow: hidden;
+  color: $text-color;
 
   p {
     margin-right: 10%;

@@ -228,8 +228,8 @@ export default {
 @import '../assets/stylus/_viewport.styl';
 
 .nav
-  position: sticky
-  z-index: 9
+  z-index: 5
+  background: pink
 
 .background
   position: relative;
@@ -241,6 +241,7 @@ export default {
 .landing 
   background: $bg_blue;
   margin-top: -1%;
+  height: 800px
   z-index: 1;
 
   .content
@@ -294,7 +295,7 @@ export default {
       padding-top 2rem
 
   @media screen and (max-width: $large-mobile-portrait-view)
-    height  650px
+    height  750px
 
     .text
       padding-top 0.5rem
@@ -338,9 +339,16 @@ export default {
   background: $bg_blue;
   z-index: 1;
   @media screen and (max-width: $tablet-portrait-view)
-    height 85rem
+    height 95rem
   @media screen and (max-width: $large-mobile-portrait-view)
+    height: 90rem
+  @media screen and (max-width: 1025px)
+    height: 105rem
+  @media screen and (max-width: 960px)
     height: 100rem
+  @media screen and (max-width: 680px)
+    height: 95rem
+  
 
   .angle2
     background: $bg_blue;
@@ -360,18 +368,21 @@ export default {
 
   .content
     padding-top: 2rem;
+    
     .info
       padding-top: 2rem;
-      margin-left: 10em;
-
+      margin-left: 6em;
+      @media screen and (max-width: $large-mobile-portrait-view)
+        margin-left: 3em;
     .title
       padding-bottom: 2rem;
-
     .applys
+      max-width: 90%
       display: flex;
+      margin-left: 3rem
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: right;
       align-items: center;
       align-content: center;
       gap: 2rem;

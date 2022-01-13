@@ -7,9 +7,9 @@
       {{ description }}
     </p>
     <div class="buttons">
-      <a :href="codeUrl">Code</a>
-      <a :href="demoUrl" v-if="demoUrl !== null">Demo</a>
-      <a>{{ language }}</a>
+      <a class="code" :href="codeUrl">Code</a>
+      <a class="demo" :href="demoUrl" v-if="demoUrl !== null">Demo</a>
+      <a class="language">{{ language }}</a>
     </div>
   </div>
 </template>
@@ -50,24 +50,25 @@ export default {
 @import '../assets/stylus/_variables.styl';
 @import '../assets/stylus/_viewport.styl';
 .project
-  background: white
-  border: 1px solid #000;
-  border-radius: 2rem;
-  padding-bottom: 2em;
-  max-width: 30%;
+  position relative
+  background white
+  border 1px solid #000
+  border-radius 2rem
+  padding-bottom 2em
+  max-width 30%
   @media screen and (max-width: $tablet-portrait-view)
-    max-width: 60%
+    max-width 60%
 
   img
-    width: 35%;
+    width 35%
 
   p
-    padding-left: 2rem;
+    padding-left 2rem
 
   .buttons
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
+    display flex
+    flex-direction row
+    justify-content center
+    align-items center
+    gap 3rem
 </style>
