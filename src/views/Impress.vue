@@ -118,6 +118,7 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 5rem;
     margin-left: 10%;
     margin-right: -2%;
 
