@@ -52,7 +52,7 @@ export default {
 .project
   position relative
   background white
-  //border 1px solid #000
+  border 1px solid #000
   border-radius 2rem
   padding-bottom 2em
   max-width 30%
