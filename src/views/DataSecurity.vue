@@ -1372,6 +1372,9 @@ export default {
     Navigation,
     Footer,
   },
+  mounted () {
+  window.scrollTo(0, 0)
+},
 };
 </script>
 
