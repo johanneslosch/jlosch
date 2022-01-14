@@ -250,6 +250,10 @@ export default {
 
     .arrows
       padding-top 2rem
+      transition-duration 5000ms
+      :hover
+        transform scale(1.025)
+        transform translateY(8rem)
       @media screen and (max-width: $tablet-portrait-view)
         padding-top 2rem 
       img

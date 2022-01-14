@@ -98,6 +98,7 @@ export default {};
         padding-bottom: 2rem
 
       .link
+        
           @media screen and (max-width: $large-mobile-portrait-view)
             font-size: $font-size_big
             img
@@ -105,10 +106,6 @@ export default {};
         img
           width: 2rem;
           padding-right: 1rem;
-
-          &:hover 
-            transform: scale(1);
-
 
       flex-grow: 1;
       gap: 1rem;
