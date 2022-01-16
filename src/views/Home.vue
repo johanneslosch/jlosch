@@ -30,7 +30,7 @@
     <div class="text">
       <h1>about me</h1>
       <div class="content">
-        <img src="https://s.jlosch.de/img/portrait.jpg" loading="lazy" />
+        <img src="@/assets/img/portrait.webp" loading="lazy" />
         <div class="nextToImg">
           <p v-if="about.content != null">
             {{ about.content }}
