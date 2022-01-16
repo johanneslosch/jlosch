@@ -341,7 +341,7 @@ export default {
   margin-top: -0.1rem;
   margin-left: -5rem;
   margin-right: -5rem;
-  height: 55rem;
+  height: 80rem;
   background: $bg_blue;
   z-index: 1;
   @media screen and (max-width: $tablet-portrait-view)
