@@ -364,7 +364,7 @@ export default {
 
   .angle2
     background: $bg_blue;
-    margin-top: 5.5rem;
+    margin-top: 6.1rem;
     max-width: 120%;
     height: 11rem;
     z-index: -5;
