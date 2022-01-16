@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navigation class="navigation" />
+    <Navigation />
     <div class="content">
       <h1>Privacy Policy</h1>
       <p>
@@ -1381,30 +1381,23 @@ export default {
 <style lang="stylus" scoped>
 @import '../assets/stylus/_variables.styl';
 
-* {
+*
   background: $bg_blue;
   vertical-align: middle;
   text-align: center;
   margin-top: -0.1rem;
+  margin-right -1.5%
 
-  .navigation {
-    position: sticky;
-    z-index: 9;
-  }
-
-  .content {
+  .content
     padding-top: 7rem;
     padding-left: 3rem;
     margin-right: -2rem;
     margin-bottom: -1.1rem;
-  }
+    padding-left: 2rem;
+    max-width: 90%
 
-  .footer {
+  .footer
     border-top: 0.5rem solid $bg_line;
-
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 600px)
       margin-bottom: -6rem;
-    }
-  }
-}
 </style>

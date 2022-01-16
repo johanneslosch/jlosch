@@ -98,7 +98,7 @@ input[type='checkbox']:checked + label span:nth-of-type(3) {
   position: fixed;
   min-width: 300px;
   right: -300px;
-  top: $nav_height *0.5;
+  top: 5rem;
   transition: right 0.3s;
   overflow: hidden;
 
@@ -147,7 +147,7 @@ input[type='checkbox']:checked + label span:nth-of-type(3) {
 .topnav {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 103%;
   height 5rem
   background-color: rgba(255, 255, 255, 0.99999)
   max-height: $nav_height;

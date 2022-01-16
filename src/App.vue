@@ -31,7 +31,7 @@
   p
   margin-right: 10%;
   font-size: 13pt;
-  @media screen and (min-width 1445px)
+  @media screen and (min-width 1945px)
     font-size: 20pt;
 
 </style>

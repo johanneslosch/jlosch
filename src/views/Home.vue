@@ -152,6 +152,9 @@ export default {
     this.getWords();
     this.getProjects();
   },
+    mounted () {
+    window.scrollTo(0, 0)
+  },
   methods: {
     getWords() {
       this.loading = true;
@@ -241,7 +244,7 @@ export default {
   margin-top: 3%;
   height: 800px
   z-index: 1;
-  @media screen and (min-width 1445px)
+  @media screen and (min-width 1945px)
     height 900px
 
   .content
@@ -293,7 +296,7 @@ export default {
 
   @media screen and (max-width: $tablet-portrait-view)
     height  850px
-  @media screen and (min-width 1445px)
+  @media screen and (min-width 1945px)
     height 100rem
 
     .text
@@ -341,7 +344,7 @@ export default {
   margin-top: -0.1rem;
   margin-left: -5rem;
   margin-right: -5rem;
-  height: 80rem;
+  height: 70rem;
   background: $bg_blue;
   z-index: 1;
   @media screen and (max-width: $tablet-portrait-view)
@@ -354,14 +357,14 @@ export default {
     height: 100rem
   @media screen and (max-width: 680px)
     height: 85rem
-  @media screen and (max-width 1445px)
-    height: 65rem;
+  @media screen and (min-width 1945px)
+    height: 80rem;
   @media screen and (max-width 1024px)
     height: 110rem;
 
   .angle2
     background: $bg_blue;
-    margin-top: 5rem;
+    margin-top: 5.5rem;
     max-width: 120%;
     height: 11rem;
     z-index: -5;
@@ -373,7 +376,7 @@ export default {
       margin-top: 0rem;
     @media screen and (max-width: $large-mobile-portrait-view)
       margin-top: 0rem;
-    @media screen and (min-width 1445px)
+    @media screen and (min-width 1945px)
       margin-top: 12rem;
     @media screen and (max-width: 680px)
       margin-top: 5rem;
@@ -420,7 +423,7 @@ export default {
 
     .title
       padding-top: 20rem;
-      @media screen and (min-width 1445px)
+      @media screen and (min-width 1945px)
         padding-top 15rem
       @media screen and (max-width 1024px)
         padding-top: 15rem
@@ -428,7 +431,7 @@ export default {
     .form
       .form-content
         margin-top: 1rem;
-        @media screen and (min-width 1445px)
+        @media screen and (min-width 1945px)
           margin-top: 0.5rem
         .button
           display: inline-block;
