@@ -50,7 +50,6 @@ export default {
 @import '../assets/stylus/_variables.styl';
 @import '../assets/stylus/_viewport.styl';
 .project
-  position relative
   background white
   //border 1px solid #000
   border-radius 2rem
@@ -61,9 +60,13 @@ export default {
 
   img
     width 35%
+    @media screen and (min-width 1445px)
+      max-width: 25%
 
   p
-    padding-left 2rem
+    max-width: 80%
+    @media screen and (min-width 1445px)
+      font-size: 16pt
 
   .buttons
     display flex

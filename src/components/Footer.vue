@@ -50,7 +50,6 @@ export default {};
 @import '../assets/stylus/_variables.styl';
 @import '../assets/stylus/_viewport.styl';
 .background
-  position: relative;
   margin-left: -5%;
   margin-right: -5%;
   height: 720px;
@@ -80,6 +79,8 @@ export default {};
         color: $text-color;
         font-size: 16pt;
         text-decoration: underline;
+        @media screen and (min-width 1445px)
+          font-size: 20pt;
       @media screen and (max-width: $large-mobile-portrait-view)
         order 0
         width: 100%
@@ -122,6 +123,8 @@ export default {};
         padding-bottom: 2rem
       svg
         width: 40%;
+        @media screen and (min-width 1445px)
+          width: 25%;
 
       flex-grow: 1;
       gap: 1rem;

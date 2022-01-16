@@ -3,14 +3,14 @@
 </template>
 
 <style lang="stylus">
-@import './assets/stylus/_variables.styl';
+@import './assets/stylus/_viewport.styl';
 
 @font-face {
   font-family: 'Coolvetica';
   src: local('Coolvetica'), url('./assets/fonts/coolvetica regular.ttf') format("truetype");
 }
 
-#app {
+#app
   font-family: 'Coolvetica';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -27,10 +27,11 @@
   height: auto;
   overflow: hidden;
   color: $text-color;
+  
+  p
+  margin-right: 10%;
+  font-size: 13pt;
+  @media screen and (min-width 1445px)
+    font-size: 20pt;
 
-  p {
-    margin-right: 10%;
-    font-size: 13pt;
-  }
-}
 </style>

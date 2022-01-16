@@ -229,10 +229,8 @@ export default {
 
 .nav
   z-index: 5
-  background: pink
 
 .background
-  position: relative;
   margin-left: -5%;
   margin-right: -5%;
   height: 720px;
@@ -240,9 +238,11 @@ export default {
 
 .landing 
   background: $bg_blue;
-  margin-top: -1%;
+  margin-top: 3%;
   height: 800px
   z-index: 1;
+  @media screen and (min-width 1445px)
+    height 900px
 
   .content
     .text
@@ -250,7 +250,6 @@ export default {
 
     .arrows
       padding-top 2rem
-      transition-duration 5000ms
       :hover
         transform scale(1.025)
         transform translateY(8rem)
@@ -289,11 +288,13 @@ export default {
       margin-top 6rem
 .about
   background $bg_pink
-  height: 1240px
+  height: 1040px
   border-bottom 0.5rem solid $bg_line
 
   @media screen and (max-width: $tablet-portrait-view)
     height  850px
+  @media screen and (min-width 1445px)
+    height 100rem
 
     .text
       padding-top 2rem
@@ -322,10 +323,11 @@ export default {
     p
       margin-left: 10%;
       padding-right: 10%;
+      max-width: 90%
       white-space: pre-wrap;
       @media screen and (max-width: $tablet-portrait-view)
         order 1
-        padding-right: 0%;
+        margin-right: 1%;
         white-space: pre-line
 
   .text
@@ -351,8 +353,11 @@ export default {
   @media screen and (max-width: 960px)
     height: 100rem
   @media screen and (max-width: 680px)
-    height: 95rem
-  
+    height: 85rem
+  @media screen and (max-width 1445px)
+    height: 65rem;
+  @media screen and (max-width 1024px)
+    height: 110rem;
 
   .angle2
     background: $bg_blue;
@@ -368,7 +373,10 @@ export default {
       margin-top: 0rem;
     @media screen and (max-width: $large-mobile-portrait-view)
       margin-top: 0rem;
-    
+    @media screen and (min-width 1445px)
+      margin-top: 12rem;
+    @media screen and (max-width: 680px)
+      margin-top: 5rem;
 
   .content
     padding-top: 2rem;
@@ -412,11 +420,16 @@ export default {
 
     .title
       padding-top: 20rem;
+      @media screen and (min-width 1445px)
+        padding-top 15rem
+      @media screen and (max-width 1024px)
+        padding-top: 15rem
 
     .form
       .form-content
         margin-top: 1rem;
-
+        @media screen and (min-width 1445px)
+          margin-top: 0.5rem
         .button
           display: inline-block;
           border-radius: 10px;

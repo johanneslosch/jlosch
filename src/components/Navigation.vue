@@ -42,7 +42,6 @@ export default {
   display: flex;
   flex-direction: column;
   width: 50px;
-  cursor: pointer;
   position: absolute;
   top: 17px;
   right: 50px;
@@ -91,14 +90,15 @@ input[type='checkbox']:checked + label span:nth-of-type(3) {
 #hamitems {
   display: flex;
   padding-top: 2rem;
-  // border-left: 1px solid $nav_dropdown_border-left-color;
-  height: 100vh;
-  background-color: rgba(217, 217, 217, 0.2);
+  border-left: 1px solid $nav_dropdown_border-left-color;
+  //height: 100vh;
+  //background-color: rgba(255, 255, 255, 0.7);
+  background linear-gradient(to left, $bg_pink, $bg_blue);
   flex-direction: column;
   position: fixed;
   min-width: 300px;
   right: -300px;
-  top: $nav_height;
+  top: $nav_height *0.5;
   transition: right 0.3s;
   overflow: hidden;
 
@@ -131,7 +131,7 @@ input[type='checkbox']:checked + label span:nth-of-type(3) {
 .logo {
   display: inline-block;
   position: absolute;
-  left: 0%;
+  left: 0.3rem;
   top: 1rem;
   margin-top: 0;
   width: 175px;
@@ -148,8 +148,8 @@ input[type='checkbox']:checked + label span:nth-of-type(3) {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: $nav-background-color;
+  height 5rem
+  background-color: rgba(255, 255, 255, 0.99999)
   max-height: $nav_height;
-  z-index: 1;
 }
 </style>
