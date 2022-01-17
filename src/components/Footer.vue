@@ -6,6 +6,7 @@
           <li>
         <router-link to="/impress" class="link"><a>Impress</a></router-link>
         </li><li><router-link to="/datasecurity" class="link"><a>Data protection</a></router-link>
+        </li><li><a href="https://status.jlosch.de" class="link">Service status</a>
         </li><li><a class="help">Help</a>
         </li><li><a>Copyright Johannes Losch</a>
       </li></ul></div>
