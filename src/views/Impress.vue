@@ -125,15 +125,25 @@ export default {
     flex-direction: column;
     justify-content: center;
     padding-top: 5rem;
+    @media screen and (max-width 960px)
+      height: 100rem
+    @media screen and (max-width 720px)
+      height: 120rem
+    @media screen and (max-width 520px)
+      height: 140rem
+    @media screen and (max-width 400px)
+      height: 160rem
     .content
-      padding-left: 4rem;
+      padding-left: 4rem
       max-width: 90%
       @media screen and (max-width: 1025px)
-        padding-left: 3rem; 
+        padding-left 3rem
       @media screen and (max-width: 960px)
-        padding-left: 3rem; 
+        padding-left 3rem
       @media screen and (max-width: 680px)
-        padding-left: 3rem; 
+        padding-left: 1rem;
+      @media screen and (max-width 520px)
+        padding-left: 1rem
     .center
       text-align: center
 
@@ -141,5 +151,8 @@ export default {
   border-top: 0.5rem solid $bg_line;
   @media screen and (min-width: 600px)
     margin-bottom: -6rem;
-
+  @media screen and (max-width: 599px)
+    margin-bottom: -5.7rem
+  @media screen and (max-width: 510px)
+    height 50rem
 </style>

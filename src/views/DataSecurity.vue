@@ -1386,7 +1386,7 @@ export default {
   vertical-align: middle;
   text-align: center;
   margin-top: -0.1rem;
-  margin-right -1.5%
+  margin-right -0.9rem
 
   .content
     padding-top: 7rem;
@@ -1396,8 +1396,12 @@ export default {
     padding-left: 2rem;
     max-width: 90%
 
-  .footer
-    border-top: 0.5rem solid $bg_line;
-    @media screen and (min-width: 600px)
-      margin-bottom: -6rem;
+.footer
+  border-top: 0.5rem solid $bg_line;
+  @media screen and (min-width: 600px)
+    margin-bottom: -6rem;
+  @media screen and (max-width: 599px)
+    margin-bottom: -5.7rem
+  @media screen and (max-width: 510px)
+    height 50rem
 </style>
