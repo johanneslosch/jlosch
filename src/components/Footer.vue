@@ -14,25 +14,33 @@
         <a href="https://linkedin.com/in/johannes-losch" target="_blank">
           <div class="link">
             <img src="https://s.jlosch.de/links/linkedin.svg" loading="lazy" />
-            LinkedIn
+              <p>
+                LinkedIn
+              </p>
           </div>
         </a>
         <a href="https://johanneslosch.medium.com/" target="_blank">
           <div class="link">
             <img src="https://s.jlosch.de/links/medium.svg" loading="lazy" />
-            Medium
+              <p>
+                Medium
+              </p>
           </div>
         </a>
         <a href="https://github.com/johanneslosch" target="_blank">
           <div class="link">
             <img src="https://s.jlosch.de/links/github.svg" loading="lazy" />
-            Github
+              <p>
+                Github
+              </p>
           </div>
         </a>
         <a href="https://twitter.com/johanneslosch" target="_blank">
           <div class="link">
             <img src="https://s.jlosch.de/links/twitter.svg" loading="lazy" />
-            Twitter
+              <p>
+                Twitter
+              </p>
           </div>
         </a>
       </div>
@@ -78,10 +86,10 @@ export default {};
           cursor: help;
       .link
         color: $text-color;
-        font-size: 16pt;
+        font-size: 12pt;
         text-decoration: underline;
         @media screen and (min-width 1445px)
-          font-size: 20pt;
+          font-size: 14pt;
       @media screen and (max-width: $large-mobile-portrait-view)
         order 0
         width: 100%
@@ -108,9 +116,13 @@ export default {};
         img
           width: 2rem;
           padding-right: 1rem;
+          float: left
+        p
+          margin-top: -0.9px
+          float: right
 
       flex-grow: 1;
-      gap: 1rem;
+      gap: 1.0rem;
       display: flex;
       flex-direction: column;
       align-items: center;
