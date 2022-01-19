@@ -1,14 +1,20 @@
 <template>
   <div class="project">
     <h2>{{ title }}</h2>
-    <img v-if="imageUrl !=null" :src="imageUrl" />
-    <img v-else src="https://s.jlosch.de/images-jlosch.de/missing-picture.svg" />
-    <p>
-      {{ description }}
-    </p>
+    <div class="img">
+      <img v-if="imageUrl !=null" :src="imageUrl" />
+      <img v-else src="https://s.jlosch.de/images-jlosch.de/missing-picture.svg" />
+    </div>
+    <div class="text">
+      <p>
+        {{ description }}
+      </p>
+    </div>
     <div class="buttons">
-      <a class="code" :href="codeUrl">Code</a>
+      <a class="code btnStyling" :href="codeUrl">Code</a>
+      <div class="space"></div>
       <a class="demo" :href="demoUrl" v-if="demoUrl !== null">Demo</a>
+      <div class="space"></div>
       <a class="language">{{ language }}</a>
     </div>
   </div>
@@ -57,21 +63,28 @@ export default {
   max-width 30%
   @media screen and (max-width: $tablet-portrait-view)
     max-width 60%
-
-  img
-    width 35%
-    @media screen and (min-width 1445px)
-      max-width: 25%
-
-  p
-    max-width: 80%
-    @media screen and (min-width 1445px)
-      font-size: 16pt
+  .img
+    height 10rem
+    img
+      width 50%
+      @media screen and (min-width 1445px)
+        max-width: 25%
+  .text
+    height 14rem
+    p
+      max-width: 80%
+      @media screen and (min-width 1445px)
+        font-size: 16pt
 
   .buttons
+    height: 2rem
     display flex
     flex-direction row
     justify-content center
     align-items center
-    gap 3rem
+    .space
+      width: 3rem
+    .btnStyling
+      border 1px solid black
+      border-radius 1rem
 </style>
