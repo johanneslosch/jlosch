@@ -159,7 +159,7 @@ export default {
     getWords() {
       this.loading = true;
       axios
-        .get(process.env.domain + "/api/inWords?amount=3")
+        .get(process.env.VUE_APP_DOMAIN + "/api/inWords?amount=3")
         .then((response) => {
           this.loading = false;
           this.words =
@@ -177,7 +177,7 @@ export default {
     getAbout() {
       this.loading = true;
       axios
-        .get(process.env.domain + "/api/about?website=jlosch.de")
+        .get(process.env.VUE_APP_DOMAIN + "/api/about?website=jlosch.de")
         .then((response) => {
           this.loading = false;
           this.about = response.data[0];
@@ -190,7 +190,7 @@ export default {
     getProjects() {
       this.loading = true;
       axios
-        .get(process.env.domain + "/api/project")
+        .get(process.env.VUE_APP_DOMAIN + "/api/project")
         .then((response) => {
           this.projects = response.data;
         })
@@ -209,7 +209,7 @@ export default {
 
       await axios
         .post(
-          process.env.domain + "/api/contact?domain=jlosch.de",
+          process.env.VUE_APP_DOMAIN + "/api/contact?domain=jlosch.de",
           details
         )
         .then((response) => {
