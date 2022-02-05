@@ -20,7 +20,7 @@
         <LinkCoponent name="medium" url="https://johanneslosch.medium.com/" />
       </div>
       <div class="arrows">
-        <img src="https://s.jlosch.de/misc/angle.svg" loading="lazy" />
+        <img src="https://test-jlosch-de.b-cdn.net/misc/angle.svg" loading="lazy" />
       </div>
     </div>
     <div class="angle1" />
@@ -30,7 +30,7 @@
     <div class="text">
       <h1>about me</h1>
       <div class="content">
-        <img src="https://test-jlosch-de.b-cdn.net/img/portrait.jpg?blur=80" loading="lazy" />
+        <img src="@/assets/img/portrait.webp" loading="lazy" />
         <div class="nextToImg">
           <p v-if="about.content != null">
             {{ about.content }}
@@ -159,7 +159,7 @@ export default {
     getWords() {
       this.loading = true;
       axios
-        .get(process.env.VUE_APP_DOMAIN + "/api/inWords?amount=3")
+        .get("https://jlosch.de/api/inWords?amount=3")
         .then((response) => {
           this.loading = false;
           this.words =
@@ -177,7 +177,7 @@ export default {
     getAbout() {
       this.loading = true;
       axios
-        .get(process.env.VUE_APP_DOMAIN + "/api/about?website=jlosch.de")
+        .get("https://jlosch.de/api/about?website=jlosch.de")
         .then((response) => {
           this.loading = false;
           this.about = response.data[0];
@@ -190,7 +190,7 @@ export default {
     getProjects() {
       this.loading = true;
       axios
-        .get(process.env.VUE_APP_DOMAIN + "/api/project")
+        .get("https://jlosch.de/api/project")
         .then((response) => {
           this.projects = response.data;
         })
@@ -209,7 +209,7 @@ export default {
 
       await axios
         .post(
-          process.env.VUE_APP_DOMAIN + "/api/contact?domain=jlosch.de",
+          "https://jlosch.de/api/contact?domain=jlosch.de",
           details
         )
         .then((response) => {
