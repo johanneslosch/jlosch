@@ -1,7 +1,7 @@
 <template>
   <a class="link" :href="url" target="_blank">
     <div class="circle">
-      <img :src="'https://test-jlosch-de.b-cdn.net/links/' + name + '.svg'" loading="lazy" />
+      <img :src="'https://s.jlosch.de/links/' + name + '.svg'" loading="lazy" />
     </div>
   </a>
 </template>

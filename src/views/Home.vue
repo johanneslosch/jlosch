@@ -20,7 +20,7 @@
         <LinkCoponent name="medium" url="https://johanneslosch.medium.com/" />
       </div>
       <div class="arrows">
-        <img src="https://test-jlosch-de.b-cdn.net/misc/angle.svg" loading="lazy" />
+        <img src="https://s.jlosch.de/misc/angle.svg" loading="lazy" />
       </div>
     </div>
     <div class="angle1" />
