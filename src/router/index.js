@@ -34,8 +34,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  mode: 'history',
-  history: createWebHistory(),
+  history: createWebHistory(process.env.VUE_APP_DOMAIN),
   routes
 })
 
