@@ -310,9 +310,9 @@ div
 
   .angle1
     background: $bg_blue;
-    margin-top: 6.1rem;
+    margin-top: 0rem;
     max-width: 120%;
-    height: 11rem;
+    height: 10rem;
     margin-left: -20%;
     border-bottom: 0.5rem solid $bg_line;
     transform rotate(-4deg)
