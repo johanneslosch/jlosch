@@ -318,7 +318,7 @@ div
     transform rotate(-4deg)
 
     @media screen and (max-width: $tablet-portrait-view)
-      margin-top 6rem
+      margin-top 0rem
 .about
   background $bg_pink
   height: 1040px
