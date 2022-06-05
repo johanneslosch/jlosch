@@ -1,120 +1,122 @@
 <template>
-  <Navigation class="nav" />
-  <div class="background landing">
-    <div class="content">
-      <div class="text">
-        <h1>Johannes Losch</h1>
-        <strong>{{ words }}</strong>
-      </div>
-      <div class="links">
-        <LinkCoponent name="github" url="https://github.com/johanneslosch" />
-        <LinkCoponent
-          name="instagram"
-          url="https://instagram.com/loschjohannes"
-        />
-        <LinkCoponent
-          name="linkedin"
-          url="https://linkedin.com/in/johannes-losch"
-        />
-        <LinkCoponent name="twitter" url="https://twitter.com/johanneslosch" />
-        <LinkCoponent name="medium" url="https://johanneslosch.medium.com/" />
-      </div>
-      <div class="arrows">
-        <img src="https://s.jlosch.de/misc/angle.svg" loading="lazy" />
-      </div>
-    </div>
-    <div class="angle1" />
-  </div>
-  <div class="background about">
-    <div class="filler"></div>
-    <div class="text">
-      <h1>about me</h1>
+  <div>
+    <Navigation class="nav" />
+    <div class="background landing">
       <div class="content">
-        <img src="@/assets/img/portrait.webp" loading="lazy" />
-        <div class="nextToImg">
-          <p v-if="about.content != null">
-            {{ about.content }}
-          </p>
-          <p v-else>is nul</p>
+        <div class="text">
+          <h1>Johannes Losch</h1>
+          <strong>{{ words }}</strong>
+        </div>
+        <div class="links">
+          <LinkCoponent name="github" url="https://github.com/johanneslosch" />
+          <LinkCoponent
+            name="instagram"
+            url="https://instagram.com/loschjohannes"
+          />
+          <LinkCoponent
+            name="linkedin"
+            url="https://linkedin.com/in/johannes-losch"
+          />
+          <LinkCoponent name="twitter" url="https://twitter.com/johanneslosch" />
+          <LinkCoponent name="medium" url="https://johanneslosch.medium.com/" />
+        </div>
+        <div class="arrows">
+          <img src="https://s.jlosch.de/misc/angle.svg" loading="lazy" />
+        </div>
+      </div>
+      <div class="angle1" />
+    </div>
+    <div class="background about">
+      <div class="filler"></div>
+      <div class="text">
+        <h1>about me</h1>
+        <div class="content">
+          <img src="@/assets/img/portrait.webp" loading="lazy" />
+          <div class="nextToImg">
+            <p v-if="about.content != null">
+              {{ about.content }}
+            </p>
+            <p v-else>is nul</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="background projects">
-    <div class="content">
-      <div class="title">
-        <h1>Projects</h1>
-      </div>
-      <div class="applys" v-if="projects !== []">
-        <ProjectComponent
-          v-for="project in projects"
-          :key="project.id"
-          class="component"
-          :title="project.title"
-          :description="project.description"
-          :codeUrl="project.gitUrl"
-          :imageUrl="project.imageUrl"
-          :language="project.language"
-          :demoUrl="project.demoUrl"
-        />
-      </div>
-      <div v-else class="applys">
-        <h2>Some Error dings</h2>
-        <p>Here should be some content</p>
-      </div>
-      <p class="info">
-        This is only a small selection of my projects. <br />You can find more
-        on my Github account.
-      </p>
-    </div>
-    <div class="angle2" />
-  </div>
-  <div class="background contact">
-    <div class="content">
-      <div class="title">
-        <h1>Contact</h1>
-      </div>
-      <div class="form">
-        <div class="form-content">
-          <input
-            type="email"
-            placeholder="email"
-            v-model="contact.email"
-            class="form-content-field text"
-            name="email"
-            id="email"
-            required="required"
+    <div class="background projects">
+      <div class="content">
+        <div class="title">
+          <h1>Projects</h1>
+        </div>
+        <div class="applys" v-if="projects !== []">
+          <ProjectComponent
+            v-for="project in projects"
+            :key="project.id"
+            class="component"
+            :title="project.title"
+            :description="project.description"
+            :codeUrl="project.gitUrl"
+            :imageUrl="project.imageUrl"
+            :language="project.language"
+            :demoUrl="project.demoUrl"
           />
         </div>
-        <div class="form-content">
-          <input
-            type="text"
-            placeholder="name"
-            v-model="contact.name"
-            class="form-content-field text"
-            name="text-1639950031232"
-            required="required"
-            aria-required="true"
-          />
+        <div v-else class="applys">
+          <h2>Some Error dings</h2>
+          <p>Here should be some content</p>
         </div>
-        <div class="form-content">
-          <textarea
-            type="textarea"
-            v-model="contact.message"
-            class="form-content-field textarea"
-            placeholder="message"
-            required="required"
-            aria-required="true"
-          ></textarea>
+        <p class="info">
+          This is only a small selection of my projects. <br />You can find more
+          on my Github account.
+        </p>
+      </div>
+      <div class="angle2" />
+    </div>
+    <div class="background contact">
+      <div class="content">
+        <div class="title">
+          <h1>Contact</h1>
         </div>
-        <div class="form-content">
-          <button class="button" @click="postContact">Send</button>
+        <div class="form">
+          <div class="form-content">
+            <input
+              type="email"
+              placeholder="email"
+              v-model="contact.email"
+              class="form-content-field text"
+              name="email"
+              id="email"
+              required="required"
+            />
+          </div>
+          <div class="form-content">
+            <input
+              type="text"
+              placeholder="name"
+              v-model="contact.name"
+              class="form-content-field text"
+              name="text-1639950031232"
+              required="required"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-content">
+            <textarea
+              type="textarea"
+              v-model="contact.message"
+              class="form-content-field textarea"
+              placeholder="message"
+              required="required"
+              aria-required="true"
+            ></textarea>
+          </div>
+          <div class="form-content">
+            <button class="button" @click="postContact">Send</button>
+          </div>
+          <p v-if="contact.responseVisible">{{ contact.response }}</p>
         </div>
-        <p v-if="contact.responseVisible">{{ contact.response }}</p>
       </div>
     </div>
+    <Footer class="footer" />
   </div>
-  <Footer class="footer" />
 </template>
 
 <script>
@@ -234,6 +236,29 @@ export default {
 <style lang="stylus" scoped>
 @import '../assets/stylus/_variables.styl';
 @import '../assets/stylus/_viewport.styl';
+@font-face {
+  font-family: 'Coolvetica';
+  src: local('Coolvetica'), url('./assets/fonts/coolvetica regular.ttf') format("truetype");
+}
+
+*
+  font-family: 'Coolvetica';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-y: hidden
+
+div
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+  text-align: center;
+  margin-bottom: -2rem;
+  padding-bottom: 2rem;
+  p
+    margin-right: 10%;
+    font-size: 13pt;
+  @media screen and (min-width 1945px)
+    font-size: 20pt;
 
 .nav
   z-index: 5
@@ -284,12 +309,12 @@ export default {
         gap 1rem
 
   .angle1
-    margin-top 8rem
-    background $bg_blue
-    max-width 120%
-    height 13rem
-    margin-left -20%
-    border-bottom: 0.5rem solid $bg_line
+    background: $bg_blue;
+    margin-top: 6.1rem;
+    max-width: 120%;
+    height: 11rem;
+    margin-left: -20%;
+    border-bottom: 0.5rem solid $bg_line;
     transform rotate(-4deg)
 
     @media screen and (max-width: $tablet-portrait-view)
@@ -297,6 +322,7 @@ export default {
 .about
   background $bg_pink
   height: 1040px
+  margin-top -10rem
   border-bottom 0.5rem solid $bg_line
 
   @media screen and (max-width: $tablet-portrait-view)
@@ -346,9 +372,9 @@ export default {
     height: 15%;
 
 .projects
-  margin-top: -0.1rem;
   margin-left: -5rem;
   margin-right: -5rem;
+  margin-top 2rem
   height: 70rem;
   background: $bg_blue;
   z-index: 1;
@@ -418,7 +444,7 @@ export default {
         flex: auto auto 100%
       
 .contact
-  margin-top: -10rem;
+  margin-top: -15rem;
   height: 850px;
   border-bottom: 0.5rem solid $bg_line;
   background: $bg_pink;
@@ -469,6 +495,7 @@ export default {
             resize: none;
 
 .footer
+  margin-top 2rem
   background: $bg_blue;
   height: 300px;
   margin-bottom: -8rem;
