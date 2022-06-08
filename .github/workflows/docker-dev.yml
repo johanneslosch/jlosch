@@ -20,7 +20,7 @@ jobs:
         uses: rlespinasse/github-slug-action@v3.x
         
       - name: Build the Docker image at ${{github.GITHUB_REPOSITORY }}
-        run: docker build . --file Dockerfile --tag registry.jlosch.de/jlosch.de/website-dev:$(date +%s)
+        run: docker build . --file Dockerfile --tag registry.jlosch.de/jlosch.de/website:dev
 
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
@@ -28,4 +28,4 @@ jobs:
           registry: ghcr.io
           username: ${{ secrets.REGISTRY_NAME }}
           password: ${{ secrets.REGISTRY_TOKEN }}
-          name: ${{ registry.jlosch.de/jlosch.de/website-dev:$(date +%s) }}
+          name: ${{ registry.jlosch.de/jlosch.de/website:dev }}
