@@ -28,4 +28,4 @@ jobs:
           registry: ghcr.io
           username: ${{ secrets.REGISTRY_NAME }}
           password: ${{ secrets.REGISTRY_TOKEN }}
-          name: ${{ registry.jlosch.de/jlosch.de/website:dev }}
+          name: registry.jlosch.de/jlosch.de/website:dev
