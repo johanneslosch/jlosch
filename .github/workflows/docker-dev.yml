@@ -25,7 +25,7 @@ jobs:
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          registry: ghcr.io
+          registry: registry.jlosch.de
           username: ${{ secrets.REGISTRY_NAME }}
           password: ${{ secrets.REGISTRY_TOKEN }}
           name: registry.jlosch.de/jlosch.de/website:dev
