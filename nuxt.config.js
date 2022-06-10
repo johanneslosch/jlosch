@@ -22,7 +22,7 @@ export default {
   css: [
   ],
   publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL
+    baseURL: process.env.BASE_URL === undefined ? 'https://test.jlosch.de' : process.env.BASE_URL
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -39,14 +39,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
   ],
-
-  // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: process.env.VUE_APP_DOMAIN || '/api/'
-  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
