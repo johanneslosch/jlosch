@@ -161,7 +161,7 @@ export default {
     getWords() {
       this.loading = true;
       axios
-        .get("https://jlosch.de/api/inWords?amount=3")
+        .get(this.$config.baseURL + "/api/inWords?amount=3")
         .then((response) => {
           this.loading = false;
           this.words =
@@ -179,7 +179,7 @@ export default {
     getAbout() {
       this.loading = true;
       axios
-        .get("https://jlosch.de/api/about?website=jlosch.de")
+        .get(this.$config.baseURL + "/api/about?website=jlosch.de")
         .then((response) => {
           this.loading = false;
           this.about = response.data[0];
@@ -192,7 +192,7 @@ export default {
     getProjects() {
       this.loading = true;
       axios
-        .get("https://jlosch.de/api/project")
+        .get(this.$config.baseURL + "/api/project")
         .then((response) => {
           this.projects = response.data;
         })
