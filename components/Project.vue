@@ -2,7 +2,7 @@
   <div class="project">
     <h2>{{ title }}</h2>
     <div class="img">
-      <img v-if="imageUrl !=null" :src="imageUrl" />
+      <img v-if="newImageURL != null" :src="newImageURL" />
       <img v-else src="https://s.jlosch.de/images-jlosch.de/missing-picture.svg" />
     </div>
     <div class="text">
@@ -13,7 +13,7 @@
     <div class="buttons">
       <a class="code btnStyling" :href="codeUrl">Code</a>
       <div class="space"></div>
-      <a class="demo" :href="demoUrl" v-if="demoUrl !== null">Demo</a>
+      <a class="demo btnStyling" :href="demoUrl" v-if="demoUrl !== null">Demo</a>
       <div class="space"></div>
       <a class="language">{{ language }}</a>
     </div>
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Project",
   props: {
@@ -48,7 +49,24 @@ export default {
       type: String,
       default: null,
     },
+    data(){
+      return {
+        newImageURL: ''
+      }
+    }
   },
+  mounted(){
+    this.getImageResponse()
+  },
+  methods: {
+    getImageResponse() {
+      axios.get(this.imageUrl).then(() => {
+        this.newImageURL = this.imageUrl
+      }).catch(() => {
+         this.newImageURL = 'https://s.jlosch.de/images-jlosch.de/missing-picture.svg'
+      })
+    }
+  }
 };
 </script>
 
@@ -82,9 +100,26 @@ export default {
     flex-direction row
     justify-content center
     align-items center
+    .name
+      left 0
+      margin-right: auto;
+      width: 15rem
+    svg
+      right 0
+      margin-left: auto;
     .space
       width: 3rem
+    .language
+      right 0
+    .code
+      left 5rem
+    .demo
+      left 50
     .btnStyling
-      border 1px solid black
+      border 1px solid #B9D494
+      padding .5rem
+      background-color #B9D494
+      color #000
+      text-decoration: none
       border-radius 1rem
 </style>
