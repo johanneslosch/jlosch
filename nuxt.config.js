@@ -10,8 +10,15 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'Website from Johannes Losch. With projects, about and contact field.' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { name: 'robots', content: 'INDEX,FOLLOW'},
+      { name: 'content-Language', content: 'en'},
+      { name: 'author', content: 'Johannes Losch'},
+      { name: 'publisher', content: 'Johannes Losch'},
+      { name: 'copyright', content: 'Johannes Losch'},
+      { name: 'Reply-to', content: 'hi@jlosch.de'},
+      { name: 'keywords', content: 'Johannes Losch, web developer, developer, Johannes, Losch, projects'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
