@@ -179,7 +179,7 @@
       <p>Eschersheimer Landstraße 42</p>
       <p>60322 Frankfurt am Main</p>
       <p>Germany</p>
-      <p>Phone: +49 3941 4114 878</p>
+      <p>Phone: +49 69 34878486</p>
       <p>Email: hi@jlosch.de</p>
       <p>Website: jlosch.de</p>
 
@@ -1407,6 +1407,8 @@ div
   margin-top: -0.1rem;
 
   .content
+    margin-left: auto
+    margin-right auto;
     padding-top: 7rem;
     margin-bottom: -1.1rem;
     padding-left: 2rem;

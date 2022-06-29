@@ -17,7 +17,7 @@
           </p>
           <p>
             <strong>Contact:</strong> <br />
-            Phone: +49 3941-4114 878<br />
+            Phone: +49 69 34878486<br />
             E-Mail: <a href="mailto:hi@jlosch.de">hi@jlosch.de</a> <br />
           </p>
           <p>
@@ -135,6 +135,8 @@ div
   flex-direction: column;
   vertical-align: middle;
   text-align: center;
+  margin-left: auto
+  margin-right auto;
 
   .impressum
     background: $bg_blue;
