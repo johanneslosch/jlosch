@@ -276,16 +276,18 @@ div
   z-index: 1;
   @media screen and (min-width 1945px)
     height 900px
+  @media screen and (max-width: 380px)
+    height 980px
 
   .content
     .text
       padding-top: 15rem;
-
+      overflow-wrap: break-word
     .arrows
       padding-top 2rem
-      :hover
-        transform scale(1.025)
-        transform translateY(8rem)
+      //:hover
+      //  transform scale(1.025)
+      //  transform translateY(8rem)
       @media screen and (max-width: $tablet-portrait-view)
         padding-top 2rem 
       img
@@ -307,7 +309,8 @@ div
 
       @media screen and (max-width: $large-mobile-portrait-view)
         gap 1rem
-
+      @media screen and (max-width: 380px)
+        flex-direction: column
   .angle1
     background: $bg_blue;
     margin-top: 0rem;
@@ -318,6 +321,9 @@ div
     transform rotate(-4deg)
 
     @media screen and (max-width: $tablet-portrait-view)
+      margin-top 0rem
+    @media screen and (max-width: 380px)
+      height 5rem
       margin-top 0rem
 .about
   background $bg_pink
@@ -387,11 +393,17 @@ div
   @media screen and (max-width: 960px)
     height: 100rem
   @media screen and (max-width: 680px)
+    margin-left: -8.5rem
     height: 85rem
   @media screen and (min-width 1945px)
     height: 80rem;
   @media screen and (max-width 1024px)
     height: 110rem;
+  @media screen and (max-width: 380px)
+    height 140rem
+    .info
+      margin-right auto
+      margin-left: auto
 
   .angle2
     background: $bg_blue;
@@ -411,7 +423,9 @@ div
       margin-top: 12rem;
     @media screen and (max-width: 680px)
       margin-top: 5rem;
-
+    @media screen and (max-width: 380px)
+      margin-top 2rem
+      height 5rem
   .content
     padding-top: 2rem;
     
@@ -448,6 +462,8 @@ div
   height: 850px;
   border-bottom: 0.5rem solid $bg_line;
   background: $bg_pink;
+  @media screen and (max-width: 380px)
+    height 750px
 
   .content
     z-index: 3;
@@ -458,6 +474,8 @@ div
         padding-top 15rem
       @media screen and (max-width 1024px)
         padding-top: 15rem
+      @media screen and (max-width: 380px)
+        padding-top 10rem
 
     .form
       .form-content
