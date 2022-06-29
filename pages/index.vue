@@ -327,10 +327,12 @@ div
       margin-top 0rem
 .about
   background $bg_pink
-  height: 1040px
+  height: 800px
   margin-top -10rem
   border-bottom 0.5rem solid $bg_line
-
+  padding-top 10rem
+  @media screen and (max-width: 380px)
+    padding-top 3rem
   @media screen and (max-width: $tablet-portrait-view)
     height  850px
   @media screen and (min-width 1945px)
