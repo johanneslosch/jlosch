@@ -20,6 +20,15 @@ export default {
       { name: 'Reply-to', content: 'hi@jlosch.de'},
       { name: 'keywords', content: 'Johannes Losch, web developer, developer, Johannes, Losch, projects'}
     ],
+    script: [
+      {
+        src:
+          'https://analytics.jlosch.de/js/plausible.js',
+          defer: true,
+          'data-domain': "jlosch.de"
+      },
+
+    ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
