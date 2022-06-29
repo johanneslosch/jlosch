@@ -365,7 +365,7 @@ div
     p
       margin-left: 10%;
       padding-right: 10%;
-      max-width: 90%
+      width: 90%
       white-space: pre-wrap;
       @media screen and (max-width: $tablet-portrait-view)
         order 1
