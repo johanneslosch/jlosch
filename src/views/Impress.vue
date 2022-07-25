@@ -7,7 +7,7 @@
         <p>Information according to § 5 TMG</p>
         <p>
           Johannes Losch <br />
-          Eschenheimer Landstraße 42<br />
+          Eschersheimer Landstraße 42<br />
           60322 Frankfurt am Main <br />
         </p>
         <p>
@@ -23,7 +23,7 @@
           <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong
           ><br />
           Johannes Losch <br />
-          Eschenheimer Landstraße 42<br />
+          Eschersheimer Landstraße 42<br />
           60322 Frankfurt am Main <br />
         </p>
         <p>
