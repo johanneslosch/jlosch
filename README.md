@@ -39,5 +39,4 @@ $ npm run serve
 ---
 
 © 2022 Johannes Losch
-
 Covered by MIT License
