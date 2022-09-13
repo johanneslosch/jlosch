@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "build_test": "SET NUXT_ENV_BASE_URL=https://test.jlosch.de & nuxt build",
+    "build_test": "NUXT_ENV_BASE_URL=https://jlosch.de & nuxt build",
     "build_main": "NUXT_ENV_BASE_URL=https://jlosch.de & nuxt build",
     "generate": "nuxt generate"
   },
