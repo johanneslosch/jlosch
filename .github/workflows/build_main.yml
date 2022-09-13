@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: Build the Docker image at ${{github.GITHUB_REPOSITORY }}
-        run: docker build . --file Dockerfile --tag registry.jlosch.de/jlosch.de/website:main
+        run: docker build . --file DockerfileMain --tag registry.jlosch.de/jlosch.de/website:main
 
       - name: Publish to Registry
         uses: elgohr/Publish-Docker-Github-Action@master

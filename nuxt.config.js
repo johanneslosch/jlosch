@@ -38,7 +38,7 @@ export default {
   css: [
   ],
   publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL === undefined ? 'https://test.jlosch.de' : process.env.BASE_URL
+    baseURL: process.env.BASE_URL === undefined ? 'https://jlosch.de' : process.env.BASE_URL
   },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
