@@ -1,0 +1,28 @@
+name: Docker dev
+
+on:
+  push:
+    branches: [ "main" ]
+
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Build the Docker image at ${{github.GITHUB_REPOSITORY }}
+        run: docker build . --file Dockerfile --tag registry.jlosch.de/jlosch.de/website:main
+
+      - name: Publish to Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          registry: https://registry.jlosch.de
+          username: ${{ secrets.REGISTRY_NAME }}
+          password: ${{ secrets.REGISTRY_TOKEN }}
+          name: registry.jlosch.de/jlosch.de/website:main
